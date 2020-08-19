@@ -10,12 +10,22 @@
   <input type="submit" value="submit">
 </form> -->
 
-<%= form_tag('/users') do%>
-  <%= label_tag 'username', 'Username:'%>
-  <%= text_field_tag 'username'%><br><br>
-  <%= label_tag 'email', 'Email:'%>
-  <%= text_field_tag 'email'%><br><br>
-  <%= label_tag 'password', 'Password:'%>
-  <%= password_field_tag 'password'%><br><br>
-  <%= submit_tag %>
+<%#= form_tag('/users') do%>
+  <%#= label_tag 'username', 'Username:'%>
+  <%#= text_field_tag 'username'%>
+  <%#= label_tag 'email', 'Email:'%>
+  <%#= text_field_tag 'email'%>
+  <%#= label_tag 'password', 'Password:'%>
+  <%#= password_field_tag 'password'%>
+  <%#= submit_tag %>
+<%# end %>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :username%>
+  <%= f.text_field :username%><br><br>
+  <%= f.label :email%>
+  <%= f.text_field :email%><br><br>
+  <%= f.label :password%>
+  <%= f.password_field :password%><br><br>
+  <%= f.submit%>
 <% end %>
