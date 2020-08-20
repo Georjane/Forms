@@ -1,4 +1,5 @@
-<%= form_for(@user) do |f| %>
+<h1>Edit your Account</h1>
+<%= form_for @user, html: {:class => "needs-validation"}  do |f| %>
   <% @user.errors.full_messages.each do |error| %>
   <li><%= error %></li><br>
   <% end %>
